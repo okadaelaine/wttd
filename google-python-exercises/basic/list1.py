@@ -34,7 +34,7 @@ def match_ends(words):
 #    return len([w for w in words if len(w)>=2 and w[0] == w[-1]])
 
 
-#ALTERNATIVA
+#ALTERNATIVA 2
 # def match_ends(words):
 #     count = 0
 #     for i in (words):
