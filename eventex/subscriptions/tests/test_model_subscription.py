@@ -20,3 +20,6 @@ class SubscriptionModelTest(TestCase):
     def test_created_at(self):
         """Subscription must have an auto create attr."""
         self.assertIsInstance(self.obj.created_at, datetime)
+
+    def test_str(self):
+        self.assertEqual('Elaine Okada', str(self.obj))
