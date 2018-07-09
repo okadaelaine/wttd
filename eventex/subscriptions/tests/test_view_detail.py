@@ -11,7 +11,9 @@ class SubscriptionDetailGet(TestCase):
             email='3l41n3@gmail.com',
             phone='11-12345-1234'
         )
-        self.resp = self.client.get('/inscricao/{}/'.format(self.obj.pk))
+        masked_id = self.obj.pk  ^ 0xABCDEFAB
+
+        self.resp = self.client.get('/inscricao/{}/'.format(masked_id))
 
 
     def test_get(self):

@@ -24,6 +24,8 @@ def create(request):
 
     subscription = Subscription.objects.create(**form.cleaned_data)
 
+    masked_id = subscription.pk ^ 0xABCDEFAB
+
     #send subscription email
     _send_mail('Confirmação de Inscrição',
                settings.DEFAULT_FROM_EMAIL,
@@ -31,7 +33,7 @@ def create(request):
                'subscriptions/subscription_email.txt',
                {'subscription': subscription})
 
-    return HttpResponseRedirect('/inscricao/{}/'.format(subscription.pk))
+    return HttpResponseRedirect('/inscricao/{}/'.format(masked_id))
 
 
 def new(request):
@@ -39,9 +41,10 @@ def new(request):
                   {'form': SubscriptionForm()})
 
 
-def detail(request, pk):
+def detail(request, masked_id):
     try:
-        subscription = Subscription.objects.get(pk=pk)
+        unmasked_id = masked_id ^ 0xABCDEFAB
+        subscription = Subscription.objects.get(pk=unmasked_id)
     except Subscription.DoesNotExist:
         raise Http404
 
