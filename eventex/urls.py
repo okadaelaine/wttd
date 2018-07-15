@@ -14,19 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, register_converter
-import eventex.core.views
-from eventex.lib.urlconverter import MaskConverter
-from eventex.subscriptions.views import subscribe, detail
+from django.urls import path, register_converter, include
 
+from eventex.core.views import home
+from eventex.lib.urlconverter import MaskConverter
 
 register_converter(MaskConverter, 'mask')
 
 
 urlpatterns = [
-    path('', eventex.core.views.home),
-    path('inscricao/', subscribe),
-    path('inscricao/<mask:pk>/', detail, name='detail'),
+    path('', home, name='home'),
+    path('inscricao/', include('eventex.subscriptions.urls')),
     path('admin/', admin.site.urls),
 ]
 
