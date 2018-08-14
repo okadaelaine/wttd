@@ -29,7 +29,7 @@ def create(request):
                       {'form': form})
 
     subscription = form.save()
-   
+
     #send subscription email
     _send_mail('Confirmação de Inscrição',
                settings.DEFAULT_FROM_EMAIL,
