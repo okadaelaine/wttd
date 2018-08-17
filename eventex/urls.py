@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, register_converter, include
 
-from eventex.core.views import home
+from eventex.core.views import home, speaker_detail
 from eventex.lib.urlconverter import MaskConverter
 
 register_converter(MaskConverter, 'mask')
@@ -25,6 +25,7 @@ register_converter(MaskConverter, 'mask')
 urlpatterns = [
     path('', home, name='home'),
     path('inscricao/', include('eventex.subscriptions.urls')),
+    path('palestrantes/<slug:slug>/', speaker_detail, name='speaker_detail'),
     path('admin/', admin.site.urls),
 ]
 

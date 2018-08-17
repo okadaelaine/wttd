@@ -1,0 +1,24 @@
+[
+{
+    "model": "core.speaker",
+    "pk": 1,
+    "fields": {
+        "name": "Grace Hopper",
+        "slug": "grace-hopper",
+        "photo": "http://hbn.link/hopper-pic",
+        "website": "http://hbn.link/hopper-site",
+        "description": "Programadora e almirante.\r\nInventora do compilador, criadora da linguagem\r\nde programa\u00e7\u00e3o Flow-Matic serviu de base para a linguagen\r\nCOBOL permitindo a populariza\u00e7\u00e3o das aplica\u00e7\u00f5es comerciais."
+    }
+},
+{
+    "model": "core.speaker",
+    "pk": 2,
+    "fields": {
+        "name": "Alan Turing",
+        "slug": "alan-turing",
+        "photo": "http://hbn.link/turing-pic",
+        "website": "http://hbn.link/turing-site",
+        "description": "Alan Mathison Turing OBE (Paddington, Londres, 23 de junho de 1912 \u2014 Cheshire East, Cheshire, 7 de junho de 1954) foi um matem\u00e1tico, l\u00f3gico, criptoanalista e cientista da computa\u00e7\u00e3o brit\u00e2nico. Foi influente no desenvolvimento da ci\u00eancia da computa\u00e7\u00e3o e na formaliza\u00e7\u00e3o do conceito de algoritmo e computa\u00e7\u00e3o com a m\u00e1quina de Turing, desempenhando um papel importante na cria\u00e7\u00e3o do computador moderno.[1][2][3] Foi tamb\u00e9m pioneiro na intelig\u00eancia artificial e na ci\u00eancia da computa\u00e7\u00e3o.[4] \u00c9 conhecido como o pai da computa\u00e7\u00e3o.\r\n\r\nDurante a Segunda Guerra Mundial, Turing trabalhou para a intelig\u00eancia brit\u00e2nica em Bletchley Park, num centro especializado em quebra de c\u00f3digos. Por um tempo ele foi chefe do Hut 8, a se\u00e7\u00e3o respons\u00e1vel pela criptoan\u00e1lise da frota naval alem\u00e3. Planejou uma s\u00e9rie de t\u00e9cnicas para quebrar os c\u00f3digos alem\u00e3es, incluindo o m\u00e9todo da bomba eletromec\u00e2nica, uma m\u00e1quina eletromec\u00e2nica que poderia encontrar defini\u00e7\u00f5es para a m\u00e1quina Enigma."
+    }
+}
+]
